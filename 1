@@ -128,7 +128,7 @@ def predict(image_path, model, topk=5):
     
     # Changing from numpy to pytorch tensor
     pytorch_tensor = torch.from_numpy (pytorch_np_image)
-    pythorch_tensor = pytorch_tensor.to('cuda' if torch.cuda.is_available() else 'cpu')
+    pytorch_tensor = pytorch_tensor.to('cuda' if torch.cuda.is_available() else 'cpu')
     #pytorch_tensor = pytorch_tensor.float()
     
     # Removing RunTimeError for missing batch size - add batch size of 1 
